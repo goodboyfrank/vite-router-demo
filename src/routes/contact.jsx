@@ -6,7 +6,7 @@ export async function loader({ params }) {
 }
 export default function Contact() {
   const submitError = () => {
-    throw new Error('配合jenkins 代码部署')
+    throw new Error('测试 代码部署')
   }
   const contact = useLoaderData();
   return (
