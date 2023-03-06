@@ -25,7 +25,7 @@ export default defineConfig(({ command, mode }) => {
         // Specify the directory containing build artifacts
         include: "./dist",
         // ext: ['js', 'jsx'],
-
+        release:'1.0.2',
         // Auth tokens can be obtained from https://sentry.io/settings/account/api/auth-tokens/
         // and needs the `project:releases` and `org:read` scopes
         authToken: 'b8e5316a14b442bc91b1f0d8319a042ec80e0efebefc4ffc8e018f079faa893f',
