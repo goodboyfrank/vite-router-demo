@@ -64,6 +64,7 @@ export default function Contact() {
             <button type="submit">Delete</button>
           </Form>
         </div>
+        <div>大慈大悲</div>
       </div>
     </div>
   );
