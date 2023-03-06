@@ -1,15 +1,14 @@
-import { Form } from "react-router-dom";
+import { Form, useLoaderData } from "react-router-dom";
+import { getContact } from "../contacts";
 
+export async function loader({ params }) {
+  return getContact(params.contactId);
+}
 export default function Contact() {
-  const contact = {
-    first: "Your",
-    last: "Name",
-    avatar: "https://placekitten.com/g/200/200",
-    twitter: "your_handle",
-    notes: "Some notes",
-    favorite: true,
-  };
-
+  const submitError = () => {
+    throw new Error('测试 代码部署')
+  }
+  const contact = useLoaderData();
   return (
     <div id="contact">
       <div>
@@ -45,7 +44,7 @@ export default function Contact() {
         {contact.notes && <p>{contact.notes}</p>}
 
         <div>
-          <Form action="edit">
+          <Form action="edit" >
             <button type="submit">Edit</button>
           </Form>
           <Form
@@ -62,9 +61,10 @@ export default function Contact() {
             }}
           >
             <button type="submit">Delete</button>
+
           </Form>
+          <button onClick={submitError}>上报异常</button>
         </div>
-        <div>大慈大悲</div>
       </div>
     </div>
   );
