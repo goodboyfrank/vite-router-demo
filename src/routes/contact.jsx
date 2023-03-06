@@ -6,7 +6,7 @@ export async function loader({ params }) {
 }
 export default function Contact() {
   const submitError = () => {
-    throw new Error('测试 代码部署')
+    throw new Error('小老头 大师傅似的')
   }
   const contact = useLoaderData();
   return (
@@ -26,7 +26,7 @@ export default function Contact() {
             </>
           ) : (
             <i>No Name</i>
-          )}{" "}
+          )}
           <Favorite contact={contact} />
         </h1>
 

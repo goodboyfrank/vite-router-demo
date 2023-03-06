@@ -21,7 +21,6 @@ Sentry.init({
 
   // We recommend adjusting this value in production, or using tracesSampler
   // for finer control
-  release: '1.0.0',
   tracesSampleRate: 1.0,
 });
 const router = createBrowserRouter([
